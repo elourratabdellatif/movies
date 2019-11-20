@@ -13,7 +13,7 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
-    @GetMapping("all")
+    @GetMapping("/all")
     public List<Movie> findAllMovies() {
         return movieService.getAllMovies();
     }

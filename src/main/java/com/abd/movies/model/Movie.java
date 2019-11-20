@@ -1,6 +1,6 @@
 package com.abd.movies.model;
 
-import com.abd.movies.utils.CustomDateDeserializer;
+import com.abd.movies.utils.CustomDateTimeDeserializer;
 import com.abd.movies.utils.CustomDateTimeSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -23,7 +23,7 @@ public class Movie {
 
     @Column
     @JsonSerialize(using = CustomDateTimeSerializer.class)
-    @JsonDeserialize(using = CustomDateDeserializer.class)
+    @JsonDeserialize(using = CustomDateTimeDeserializer.class)
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     private DateTime releaseDate;
 

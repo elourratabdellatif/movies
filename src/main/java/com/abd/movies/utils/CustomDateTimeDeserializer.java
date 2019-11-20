@@ -10,16 +10,16 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class CustomDateDeserializer extends StdDeserializer<DateTime> {
+public class CustomDateTimeDeserializer extends StdDeserializer<DateTime> {
 
     private SimpleDateFormat formatter =
             new SimpleDateFormat("dd/MM/yyyy");
 
-    public CustomDateDeserializer() {
+    public CustomDateTimeDeserializer() {
         this(null);
     }
 
-    public CustomDateDeserializer(Class<?> vc) {
+    public CustomDateTimeDeserializer(Class<?> vc) {
         super(vc);
     }
 
